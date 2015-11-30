@@ -1,19 +1,20 @@
 import numpy as np
+import mapShowTest
 import random
 
 rand = lambda : random.randint(0,1)
 
 if __name__ == '__main__':
-	height = 10
+	height = 8
 	wight = 8
 	cmap = np.zeros((height,wight),np.uint8)
 	for i in range(height):
 		for j in range(wight):
 			cmap[i][j] = rand()
-	print cmap
-	
+	# print cmap
+	mapShowTest.init(cmap,100)
 	for x in range(100):
-	
+		print x
 		cmap2 = np.zeros((height,wight),np.uint8)
 		for i in range(height):
 			for j in range(wight):
@@ -29,6 +30,7 @@ if __name__ == '__main__':
 					cmap2[i][j] = 1
 				else:
 					cmap2[i][j] = cmap[i][j]
-		# print cmap2
 		cmap = cmap2
+		mapShowTest.drawTwo(cmap,100)
 	print cmap
+	
