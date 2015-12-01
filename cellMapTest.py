@@ -10,6 +10,11 @@ rate = 10
 cmap = 0
 # rand = lambda : 1 if random.randint(0,100) > born else 0
 
+# 初始化地形
+# m_height 地图的高
+# m_width 地图的宽
+# m_rate 放大倍数
+# m_born 出生率
 def init(m_height,m_width,m_rate,m_born):
 	global height,width,rate,born
 	height = m_height
@@ -52,7 +57,8 @@ def caluNext(num):
 			break;
 		cmap = cmap2
 		mapShowTest.drawTwo(cmap,rate)
-
+# 开始迭代
+# num 迭代次数
 def start(num):
 	createFirst()
 	caluNext(num)
