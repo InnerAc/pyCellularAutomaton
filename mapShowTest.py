@@ -24,7 +24,7 @@ def init(cmap,b):
 	width = cmap.size / height
 	height *= b
 	width *= b
-	print height,width
+	# print height,width
 	image = np.zeros((height,width), np.uint8)
 	# drawTwo(cmap,b)
 
@@ -46,7 +46,7 @@ def drawTwo(cmap,b):
 	cv2.namedWindow("元胞自动机",cv2.CV_WINDOW_AUTOSIZE)	
 	cv2.imshow(win_name, image)
 	# time.sleep(1)
-	cv2.waitKey(0)
+	cv2.waitKey(100)
 	
 if __name__ == '__main__':
 	a = np.zeros((15,10),np.uint8)
